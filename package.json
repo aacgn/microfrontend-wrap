@@ -1,0 +1,45 @@
+{
+  "name": "microfrontend-wrap",
+  "version": "1.0.0",
+  "description": "Reactive, microfrontend-oriented view layer for modern web interfaces.",
+  "files": [
+    "src",
+    "dist/*.js"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verify-commit-msg.js"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aacgn/microfrontend-wrap.git"
+  },
+  "keywords": [
+    "microfrontend-wrap"
+  ],
+  "author": "Antonio Neto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aacgn/microfrontend-wrap/issues"
+  },
+  "homepage": "https://github.com/aacgn/microfrontend-wrap#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.11.0",
+    "loadash": "^1.0.0"
+  }
+}
